@@ -2,8 +2,11 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
-      <h1>Contact us</h1>
+    <div className="max-w-screen w-full h-screen">
+      <div className="container mx-auto px-4 md:px-6">
+      
+      </div>
+    
     </div>
   )
 }

@@ -18,6 +18,7 @@ import { addMoviesTrailer } from "../utils/movieSlice";
       );
 
       const json = await data.json();
+     
   
       const MovieTrailer = json.results.filter(
         (video) => video.type === "Trailer"

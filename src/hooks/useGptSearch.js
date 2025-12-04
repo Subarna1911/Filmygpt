@@ -22,6 +22,7 @@ export const useGptSearch = () => {
           ApiOptions
         );
         const data = await res.json();
+      
         return { name: movie, results: data.results || [] };
       })
     );
