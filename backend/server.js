@@ -1,11 +1,15 @@
 import express from "express";
 import cors from "cors";
-import fetch from "node-fetch"; 
+import fetch from "node-fetch";
 import dotenv from "dotenv";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
 app.use(express.json());
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
@@ -20,11 +24,11 @@ app.post("/api/movies", async (req, res) => {
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
-  "Content-Type": "application/json",
-  "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-  "HTTP-Referer": "http://localhost:5000",
-  "X-Title": "Movie Recommender",
-},
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+        "HTTP-Referer": "http://localhost:5000",
+        "X-Title": "Movie Recommender",
+      },
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [{ role: "user", content: `Recommend movies related to "${query}"` }],
