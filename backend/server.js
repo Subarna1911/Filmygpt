@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: "*", // allow requests from any origin (including Vercel)
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
