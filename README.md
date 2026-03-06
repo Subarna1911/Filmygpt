@@ -2,7 +2,6 @@
 
 > A Netflix-inspired movie discovery platform powered by AI — search naturally, discover intelligently.
 
-
 ## 📖 Overview
 
 **FilmyGPT** is a full-stack movie discovery web application that combines the visual experience of a streaming platform with the power of AI-driven recommendations. Users can browse trending movies, watch trailers, manage a personal watchlist, and use natural language to get personalized movie suggestions powered by an LLM.

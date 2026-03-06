@@ -1,5 +1,5 @@
 const fetchMovieRecommendations = async (query) => {
-  const response = await fetch("http://localhost:5000/api/movies", {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/movies`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query }),
@@ -9,7 +9,7 @@ const fetchMovieRecommendations = async (query) => {
     throw new Error("Failed to fetch movies");
   }
 
-  return await response.json(); 
+  return await response.json();
 };
 
 

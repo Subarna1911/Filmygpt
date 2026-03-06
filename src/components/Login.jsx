@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header"
 import bgImg from '../assets/bgImg.jpg'
 import netflixgpt from '../assets/netflixgpt.png'
@@ -73,10 +72,9 @@ const Login = () => {
             .catch((error) => {
               setErrorMessage(error.message);
             });
-          console.log(user);
         })
         .catch((error) => {
-          const errorCode    = error.code;
+          const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "_" + errorMessage);
         });
@@ -103,19 +101,19 @@ const Login = () => {
 
   return (
     <div className="relative w-full h-screen">
-  {/* Background */}
-  <img
-    className="object-cover w-full h-full absolute inset-0"
-    src={bgImg}
-    alt="banner"
-  />
+      {/* Background */}
+      <img
+        className="object-cover w-full h-full absolute inset-0"
+        src={bgImg}
+        alt="banner"
+      />
 
-  <div className="absolute inset-0 bg-black/20"></div>
-    <div className="absolute top-0 left-0 w-full z-20">
-      <Header />
-    </div>
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute top-0 left-0 w-full z-20">
+        <Header />
+      </div>
 
-  {/* Content */}
+      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-8">
         <form
           onSubmit={(e) => e.preventDefault()}
@@ -179,34 +177,34 @@ const Login = () => {
               : "Already registered? Sign in now"}
           </p>
         </form>
-      
+
         <div className="max-w-screen px-8">
           <div className="left-20 absolute">
-              <img className="sticker w-20 h-20" src={greencam} alt="sticker" />
+            <img className="sticker w-20 h-20" src={greencam} alt="sticker" />
           </div>
 
           <div className="right-10 absolute">
-              <img className="sticker w-20 h-20" src={pop} alt="sticker" />
+            <img className="sticker w-20 h-20" src={pop} alt="sticker" />
           </div>
 
           <div className="bottom-5 absolute">
-              <img className="sticker w-20 h-20" src={moviecam} alt="sticker" />
+            <img className="sticker w-20 h-20" src={moviecam} alt="sticker" />
           </div>
 
           <div className="top-10 absolute">
-              <img className="sticker w-20 h-20" src={mvPhoto} alt="sticker" />
+            <img className="sticker w-20 h-20" src={mvPhoto} alt="sticker" />
           </div>
 
           <div className="top-20  left-40 absolute">
-              <img className="sticker w-20 h-20" src={netflixgpt} alt="sticker" />
+            <img className="sticker w-20 h-20" src={netflixgpt} alt="sticker" />
           </div>
 
-           <div className="top-20  right-30 absolute">
-              <img className="sticker w-20 h-20" src={logo11} alt="sticker" />
+          <div className="top-20  right-30 absolute">
+            <img className="sticker w-20 h-20" src={logo11} alt="sticker" />
           </div>
         </div>
       </div>
- </div>
+    </div>
 
   );
 };

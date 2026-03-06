@@ -1,4 +1,3 @@
-import React from "react";
 import { useGptSearch } from "../hooks/useGptSearch";
 import MovieList from "./MovieList";
 import Shimmer from "./Shimmer";
@@ -6,8 +5,8 @@ import Shimmer from "./Shimmer";
 const GptMovieSuggestions = () => {
   const { gptMovies, loading } = useGptSearch();
   const { movieResults } = gptMovies || {};
-  if(loading){
-    return(
+  if (loading) {
+    return (
       <div className="max-w-screen-xl mx-auto px-6 py-10">
         <Shimmer />
       </div>

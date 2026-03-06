@@ -18,15 +18,14 @@ function useHasHover() {
 const MovieCard = ({ movie }) => {
   const navigate = useNavigate();
   const hasHover = useHasHover();
+  const trailer = useHoverTrailer(movie?.id);
   if (!movie?.poster_path) return null;
-
-  const trailer = useHoverTrailer(movie.id);
 
   if (hasHover)
     return (
       <HoverCard.Root openDelay={120} closeDelay={80}>
         <HoverCard.Trigger asChild>
-          <Link to={`browse/movie/${movie.id}`} className="block relative">
+          <Link to={`/browse/movie/${movie.id}`} className="block relative">
             <div className="group relative w-full h-42 m-2 cursor-pointer transition-transform scale-95 duration-300 hover:scale-100 overflow-hidden rounded-lg">
               <img
                 className="w-full h-45 object-cover rounded-lg"
