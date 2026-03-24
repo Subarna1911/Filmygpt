@@ -6,6 +6,7 @@ import Mylist from "../pages/Mylist";
 import Homepage from "../pages/Homepage";
 import MovieDetails from "../components/MovieDetails";
 import Contact from "../pages/Contact";
+import About from "../pages/About";
 
 // Defined outside the component so it's only created once
 const appRouter = createBrowserRouter([
@@ -20,6 +21,7 @@ const appRouter = createBrowserRouter([
       { path: "/browse", element: <Homepage /> },
       { path: "my-list", element: <Mylist /> },
       { path: "contact", element: <Contact /> },
+      { path: "about", element: <About /> },
       { path: "movie/:id", element: <MovieDetails /> },
     ],
   },
